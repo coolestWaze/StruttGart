@@ -1,0 +1,79 @@
+import time
+print('[?] - Olá aventureiro! Como vai? Está pronto para entrar nas ruínas de StruttGart? Espero que sim!')
+print('[?] - Vamos começar do Básico, me conte seu nome?')
+player = input('Digite seu nome aqui: ')
+print(f"''{player}''... Ok! entendido. Agora vamos para algo mais interessante, ARMAS! Vamos lá!")
+print(f'''ok, {player}, escolha um número para adquirir alguma dessas armas: 
+[ 1 ] - Espada curta
+[ 2 ] - Espada média
+[ 3 ] - Espada longa
+[ 4 ] - Faixa para punho
+[ 5 ] - Núcleo mágico''')
+arma = int(input('Escolha aqui: '))
+if arma == 1:
+    print('[?] - Aham, voce parece ser bem agil, boa escolha!')
+elif arma == 2:
+    print('Básico, arma média é algo que da certo com todos, voce vai se acostumar!')
+elif arma == 3:
+    print('[?] - Wow... Voce tem que ser bem forte para usar esta arma\nmas tenho certeza que vai se acostumar!')
+elif arma == 4:
+    print('[?] - Entendi, então voce gosta de sair na mão com os outros? interessante...')
+elif arma == 5:
+    print('[?] - Faz tempo que não vejo aventureiros escolherem isto...')
+elif arma == 0:
+    print('Ops, deu algum erro, voce digitou 0, escolha um numero de 1 a 5!')
+elif arma < 0:
+    print('Ops, deu algum erro, voce digitou um valor negativo, escolha um numero de 1 a 5!')
+elif arma > 5:
+    print('Ops, deu algum erro, voce digitou um valor maior que 5, escolha apenas um numero de 1 a 5!')
+
+print('[?] - Certo, agora eu me despeço de voce por enquanto, a criação de personagem ainda não terminou!')
+xk = int(input('Digite 1 para continuar '))
+if xk == 1:
+    print('[?] - Agora irei chamar o grande mestre Fuingett, ele irá dar continuação a sua aventura! A propósito, ')
+    print('Eu nem me apresentei, prazer, sou Meya, a assistente de aventureiros aqui em StruttGart!')
+    xk1 = int(input('Digite 1 para continuar '))
+    print('[Meya] - Agora vamos chamar Fuingett, temos que contar até 3 e bater uma palma, vamos comigo!')
+else:
+    print('...')
+    (exit())
+xk2 = int(input('digite 1 para continuar'))
+if xk2 == 1:
+    print('...')
+    time.sleep(1)
+    print('1')
+    time.sleep(2)
+    print('2')
+    time.sleep(2)
+    print('3')
+    time.sleep(2)
+    print('E agora..')
+    time.sleep(1.5)
+    print('*clap*')
+else:
+    print('...')
+    (exit())
+print('*Mestre Fuingett aparece, com um semblante assustador e misterioso...*')
+xk3 = int(input('digite 1 para continuar '))
+if xk3 == 1:
+    print('[Fuingett] - Oh.. Este é o novo aventureiro de StruttGart..? Venha comigo rapaz')
+else:
+    print('...')
+    (exit())
+print('''Ir com Fuingett: [1]
+Perguntar sobre quem é ele: [2]''')
+resposta = int(input('Digite sua resposta: '))
+if resposta == 1:
+    print(f'[{player}] - claro.. *Vai atrás de Fuingett*')
+elif resposta == 2:
+    print(f'[{player}] - Senhor, mas.. quem é voce?')
+    print('[Fuingett] - Olha garoto, não precisa me chamar de senhor, haha!')
+    print('Eu sou Fuingett, o mago de StruttGart, não se preocupe, ao longo de sua jornada voce irá aprender')
+    print('Mais sobre esta terra lendária e sobre mim.')
+    print(f'[{player}] - ok.. *Vai atrás de Fuingett*')
+xk4 = int(input('digite 1 para continuar '))
+if xk4 == 1:
+    print('*Voce segue para uma caverna escura onde Fuingett te leva...')
+else:
+    print('...')
+    (exit())
