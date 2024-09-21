@@ -48,7 +48,7 @@ print(f'''Seus status agora são:
 [agilidade] - {agil}
 [destreza] - A ser decidido.
 [intelecto] - A ser decidido.''')
-DEX = int(input('Digite o valor de status de sua dextreza aqui: '))
+DEX = int(input('Digite o valor de status de sua destreza aqui: '))
 dexremain = agilremain - DEX
 if dexremain == 0:
     print('Acabou seus pontos para distribuir!')
