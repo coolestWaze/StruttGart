@@ -68,8 +68,10 @@ if resposta == 1:
 elif resposta == 2:
     print(f'[{player}] - Senhor, mas.. quem é voce?')
     print('[Fuingett] - Olha garoto, não precisa me chamar de senhor, haha!')
+    time.sleep(0.2)
     print('Eu sou Fuingett, o mago de StruttGart, não se preocupe, ao longo de sua jornada voce irá aprender')
     print('Mais sobre esta terra lendária e sobre mim.')
+    time.sleep(0.2)
     print(f'[{player}] - ok.. *Vai atrás de Fuingett*')
 xk4 = int(input('digite 1 para continuar '))
 if xk4 == 1:
@@ -77,3 +79,29 @@ if xk4 == 1:
 else:
     print('...')
     (exit())
+print('*Andando por caminhos no interior da caverna* [Fuingett] - Aqui estamos, sem a iluminação do sol, eu posso')
+print('alterar sua raça, que atualmente é desconhecida.')
+print('*Fuingett puxa um papel dos bolsos e te apresenta, neste papel esta: *')
+print('''[ 1 ] - Humano
+[ 2 ] - Hobbit
+[ 3 ] - Anão
+[ 4 ] - Gigante
+[ 5 ] - Strovin''')
+raça = int(input('Escolha sua raça: '))
+if raça == 1:
+    print('Voce escolheu Humano!')
+elif raça == 2:
+    print('Voce escolheu Hobbit!')
+elif raça == 3:
+    print('Voce escolheu Anão!')
+elif raça == 4:
+    print('Voce escolheu Gigante!')
+elif raça == 5:
+    print('Strovin..? Não me lembro de ter adicionado esta raça aqui... Não escolha isto, porfavor.') # -- Este é sobre a lore de StruttGart
+    exit()
+else:
+    print('...')
+    exit()
+print('[Fuingett] - Ótimo, podemos continuar!')
+time.sleep(0.2)
+print('Vamos lá, vamos voltar para a superficie de StruttGart!')
