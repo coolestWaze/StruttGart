@@ -12,14 +12,19 @@ print(f'''ok, {player}, escolha um número para adquirir alguma dessas armas:
 arma = int(input('Escolha aqui: '))
 if arma == 1:
     print('[?] - Aham, voce parece ser bem agil, boa escolha!')
+    
 elif arma == 2:
     print('Básico, arma média é algo que da certo com todos, voce vai se acostumar!')
+    
 elif arma == 3:
     print('[?] - Wow... Voce tem que ser bem forte para usar esta arma\nmas tenho certeza que vai se acostumar!')
+    
 elif arma == 4:
     print('[?] - Entendi, então voce gosta de sair na mão com os outros? interessante...')
+    
 elif arma == 5:
     print('[?] - Faz tempo que não vejo aventureiros escolherem isto...')
+    
 elif arma == 0:
     print('Ops, deu algum erro, voce digitou 0, escolha um numero de 1 a 5!')
 elif arma < 0:
@@ -87,16 +92,16 @@ print('''[ 1 ] - Humano
 [ 3 ] - Anão
 [ 4 ] - Gigante
 [ 5 ] - Strovin''')
-raça = int(input('Escolha sua raça: '))
-if raça == 1:
+raca = int(input('Escolha sua raça: '))
+if raca == 1:
     print('Voce escolheu Humano!')
-elif raça == 2:
+elif raca == 2:
     print('Voce escolheu Hobbit!')
-elif raça == 3:
+elif raca == 3:
     print('Voce escolheu Anão!')
-elif raça == 4:
+elif raca == 4:
     print('Voce escolheu Gigante!')
-elif raça == 5:
+elif raca == 5:
     print('Strovin..? Não me lembro de ter adicionado esta raça aqui... Não escolha isto, porfavor.') # -- Este é sobre a lore de StruttGart
     exit()
 else:
