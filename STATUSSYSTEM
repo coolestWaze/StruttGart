@@ -16,16 +16,24 @@ if strenght > 12:
 elif strenght < 0:
     print('Ops, voce não pode adicionar menos que 0 pontos de status! tente novamente.')
     exit()
+elif strenght  == 12:
+    print('Voce usou todos seus pontos em força...')
+    print('Seu desenvolvimento de status finalizou.')
+    exit()
 else:
     print(f"adicionado {strenght} pontos de força para seus status!")
 remain = 12 - strenght
 print(f'Ok! Agora vamos para os status de agilidade! Voce tem {remain} pontos para gastar! ')
+
 agil = int(input('Agilidade: '))
+
 if agil > remain:
     print('Ops, voce não pode adicionar mais que 12 pontos de status! tente novamente.')
+    exit()
 elif agil < 0:
     print('Ops, voce não pode adicionar menos que 0 pontos de status! tente novamente.')
     exit()
+
 else:
     print(f"adicionado {agil} pontos de agilidade para seus status!")
 agilremain = remain - agil
@@ -52,6 +60,9 @@ DEX = int(input('Digite o valor de status de sua destreza aqui: '))
 dexremain = agilremain - DEX
 if dexremain == 0:
     print('Acabou seus pontos para distribuir!')
+elif dexremain < 0:
+    print('Houve um erro, seus pontos estão negativos.')
+    exit()
 elif dexremain < 2:
     print(f'Voce tem poucos pontos para distribuir! ({dexremain})')
 elif dexremain >= 2:
