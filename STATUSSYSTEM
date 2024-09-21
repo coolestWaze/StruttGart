@@ -39,4 +39,11 @@ elif remain < 2:
 elif remain >= 3:
     print(f"Voce tem {agilremain} pontos para gastar em seus status!")
     
+    xrk1 = int(input('Digite 1 para continuar'))
+    if xrk1 == 1:
+        print('Vamos para a "Destreza agora!"')
+    else:
+        print('...')
+        exit()
+
 #NOT COMPLETE YET!!
