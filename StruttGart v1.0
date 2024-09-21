@@ -12,19 +12,19 @@ print(f'''ok, {player}, escolha um número para adquirir alguma dessas armas:
 arma = int(input('Escolha aqui: '))
 if arma == 1:
     print('[?] - Aham, voce parece ser bem agil, boa escolha!')
-    
+
 elif arma == 2:
     print('Básico, arma média é algo que da certo com todos, voce vai se acostumar!')
-    
+
 elif arma == 3:
     print('[?] - Wow... Voce tem que ser bem forte para usar esta arma\nmas tenho certeza que vai se acostumar!')
-    
+
 elif arma == 4:
     print('[?] - Entendi, então voce gosta de sair na mão com os outros? interessante...')
-    
+
 elif arma == 5:
     print('[?] - Faz tempo que não vejo aventureiros escolherem isto...')
-    
+
 elif arma == 0:
     print('Ops, deu algum erro, voce digitou 0, escolha um numero de 1 a 5!')
 elif arma < 0:
@@ -104,9 +104,26 @@ elif raca == 4:
 elif raca == 5:
     print('Strovin..? Não me lembro de ter adicionado esta raça aqui... Não escolha isto, porfavor.') # -- Este é sobre a lore de StruttGart
     exit()
-else:
+elif raca > 5:
+    print('...')
+    exit()
+elif raca < 0:
     print('...')
     exit()
 print('[Fuingett] - Ótimo, podemos continuar!')
+xk5 = int(input('Digite 1 para continuar '))
+if xk5 == 1:
+    print('Vamos lá, vamos voltar para a superficie de StruttGart!')
+else:
+    print('...')
+    exit()
 time.sleep(0.2)
-print('Vamos lá, vamos voltar para a superficie de StruttGart!')
+print('*de volta a superficie, voce sente algo correndo por suas veias...')
+if raca == 1:
+    print('Voce tem um sangue bem... humano?')
+elif raca == 2:
+    print('voce se sente pequeno... e com fome')
+elif raca == 3:
+    print('voce se sente pequeno...')
+elif raca == 4:
+    print('voce se sente grande, e pesado...')
