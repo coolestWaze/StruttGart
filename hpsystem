@@ -39,5 +39,17 @@ elif atkr == 'fence':
             print('Voce não se defende!')
             print(f'O dano causado será {atkf}')
             print(f'Seu HP agora é {hp - atkf}!')
-print('Voce será atacado! ')
+elif atk == 'common atk':
+    print('Voce foi atacado, oque deseja fazer? ')
+    print('[ 1 ] - defender')
+    act2 = int(input('Digite sua ação '))
+    if act2 == 1:
+        print('Voce tenta se defender! ')
+        print(defesar)
+        if defesar == 1:
+            print('Voce se defende! ')
+        else:
+            print('Voce não se defende! ')
+            print(f'O dano causado será {atkc}')
+            print(f'Seu hp agora é {hp - atkc}')
 print(atkr)
