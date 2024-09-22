@@ -1,3 +1,4 @@
+import random
 import time
 print('[?] - Olá aventureiro! Como vai? Está pronto para entrar nas ruínas de StruttGart? Espero que sim!')
 print('[?] - Vamos começar do Básico, me conte seu nome?')
@@ -127,3 +128,59 @@ elif raca == 3:
     print('voce se sente pequeno...')
 elif raca == 4:
     print('voce se sente grande, e pesado...')
+print('*Saindo das cavernas, voce ve criaturas pelos céus, até que uma se aproxima de forma assustadora...')
+print('[Fuingett] - Aqui estamos, seu primeiro combate pode iniciar agora, não tenho muito que explicar garoto,')
+print('apenas derrote-o, é um experimento. ')
+print('''Opções: [ 1 ] - "Fuingett, eu não posso, eu não entendo oque estou fazendo..."
+[ 2 ] - ... *Vai para cima da criatura*''')
+opc = int(input('Escolha oque fará: '))
+if opc == 2:
+    print("[Fuingett] - Aham.. voce é rápido. Boa sorte!")
+elif opc == 1:
+    print("[Fuingett] - Voce está pronto garoto, se acalme, nada vai dar errado.")
+    print("Opções: [ 1 ] - *Continue, e enfrente a criatura*"
+            "[ 2 ] - *Peça peça para entender melhor sobre*")
+    opc1 = int(input('Escolha sua ação: '))
+    if opc1 == 2:
+        print('[Fuingett] - Não há oque entender, apenas vá.')
+    elif opc == 1:
+        print('Voce enfrenta seu medo e vai...')
+else:
+    print('...')
+    exit()
+atk = random.randint(1, 20)
+defesa = random.randint(1, 20)
+esquiva = random.randint(1, 20)
+print('''Voce deseja:   [ 1 ] - contra-atacar
+                    [ 2 ] - defender
+                    [ 3 ] = esquivar''')
+esc = int(input('Digite sua ação: '))
+if esc == 1:
+    print(f'o valor sorteado em ataque foi {atk}')
+    if atk < 8:
+            print('Voce erra. (- 5 DMG causado)')
+    elif atk > 8:
+            print('Voce acerta! (5 DMG)')
+    elif atk == 20:
+            print('Voce deu dano critico (10 DMG)')
+    else:
+        print('...')
+        exit()
+elif esc == 2:
+    print(f'O valor sorteado em defesa foi {defesa}!')
+    if defesa < 8:
+            print('Voce não defende. (-2 DMG)')
+    elif defesa >= 8:
+            print('Voce defende!')
+    else:
+        print('...')
+        exit()
+elif esc == 3:
+    print(f'O valor sorteado em esquiva foi {esquiva}')
+    if esquiva >= 10:
+        print('Voce esquivou!')
+    elif esquiva < 10:
+        print('Voce não esquivou. (- 5 DMG)')
+    else:
+        print('...')
+        exit()
