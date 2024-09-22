@@ -1,0 +1,43 @@
+import random
+player = input('Digite seu nome: ')
+hp = 100
+print('Voce tem 100 de vida! ')
+atk = ['stab', 'fence', 'common atk']
+atkr = random.choice(atk)
+atks = random.randint(16, 31)
+atkf = random.randint(6, 41)
+atkc = random.randint(11, 21)
+defesa = [1, 2, 1, 2]
+defesar = random.choice(defesa)
+if atkr == 'stab':
+    print("Voce foi perfurado, oque deseja fazer?")
+    print("[ 1 ] - defender")
+    act = int(input('Digite sua ação: '))
+    if act == 1:
+        print('Voce tenta defender; ')
+        print(defesar)
+        if defesar == 1:
+            print('Voce se defende!')
+        else:
+            print('Voce não se defende! ')
+            print(f"voce recebe {atkf} de dano")
+            print(f"seu hp agora é {hp - atkf}!")
+            exit()
+    else:
+        print('...')
+        exit()
+elif atkr == 'fence':
+    print('Voce foi arranhado, oque deseja fazer? ')
+    print ('[ 1 ] - defender')
+    act1 = int(input('Digite sua ação: '))
+    if act1 == 1:
+        print('Voce tenta se defender! ')
+        print(f'{defesar}')
+        if defesar == 2:
+            print('Voce se defende! ')
+        else:
+            print('Voce não se defende!')
+            print(f'O dano causado será {atkf}')
+            print(f'Seu HP agora é {hp - atkf}!')
+print('Voce será atacado! ')
+print(atkr)
