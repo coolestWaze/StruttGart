@@ -11,13 +11,11 @@ if n1 == 1:
     hpless = random.randint(11, 900)
     g = f'Oh não! Torkh acabou de receber um ataque, o dano tomado foi {hpless}'
 
-
     def caido():
         if totaldmg <= 0:
             return True
         else:
             return False
-
 
     totaldmg = vida2 - hpless
     x = caido()
