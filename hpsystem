@@ -4,9 +4,7 @@ hp = 100
 print('Voce tem 100 de vida! ')
 atk = ['stab']
 atkr = random.choice(atk)
-atks = random.randint(50, 100)
-atkf = random.randint(50, 100)
-atkc = random.randint(50, 100)
+atkf = random.randint(100, 100)
 defesa = [1, 2, 1, 2]
 defesar = random.choice(defesa)
 print(atkr)
@@ -70,4 +68,5 @@ if atkr == 'stab':
                 print('Voce morreu.')
                 exit()
 
-#I OFC FIXED MANY ERRORS HERE BRO... (but +10 loc)
+# I REMOVED SOME ATTACKS.
+# THE MIN AND MAX DAMAGE MUST BE CHANGED, THIS IS JUST FOR A EXPERIMENT!!!
