@@ -1,5 +1,6 @@
 import random
 import time
+hp = 100
 print('[?] - Olá aventureiro! Como vai? Está pronto para entrar nas ruínas de StruttGart? Espero que sim!')
 print('[?] - Vamos começar do Básico, me conte seu nome?')
 player = input('Digite seu nome aqui: ')
@@ -58,7 +59,7 @@ if xk2 == 1:
     print('*clap*')
 else:
     print('...')
-    (exit())
+    exit()
 print('*Mestre Fuingett aparece, com um semblante assustador e misterioso...*')
 xk3 = int(input('digite 1 para continuar '))
 if xk3 == 1:
@@ -149,38 +150,67 @@ else:
     print('...')
     exit()
 atk = random.randint(1, 20)
+atkd = random.randint(5, 25)
 defesa = random.randint(1, 20)
 esquiva = random.randint(1, 20)
 print('''Voce deseja:   [ 1 ] - contra-atacar
                     [ 2 ] - defender
-                    [ 3 ] = esquivar''')
+                    [ 3 ] - esquivar''')
 esc = int(input('Digite sua ação: '))
 if esc == 1:
-    print(f'o valor sorteado em ataque foi {atk}')
-    if atk < 8:
-            print('Voce erra. (- 5 DMG causado)')
-    elif atk > 8:
-            print('Voce acerta! (5 DMG)')
-    elif atk == 20:
-            print('Voce deu dano critico (10 DMG)')
-    else:
-        print('...')
-        exit()
+    print('Voce tenta contra-atacar! ')
+    print(atk)
+    if atk > 10:
+        print('Voce acerta!')
+        print(atkd)
+        print(f'Voce contra-ataca e da {atkd} de dano!')
+
+    elif atk <= 10:
+        print('Voce erra e receberá outro ataque.')
+        print(atkd)
+        hp -= atkd
+        print(f'voce é atacado e sofre {atkd} de dano.')
+        print(f'Voce está com {hp} de vida.')
+        if hp <= 0:
+            print('...')
+            time.sleep(1)
+            print('Voce morreu... Tente novamente.')
+            exit()
 elif esc == 2:
-    print(f'O valor sorteado em defesa foi {defesa}!')
-    if defesa < 8:
-            print('Voce não defende. (-2 DMG)')
-    elif defesa >= 8:
-            print('Voce defende!')
-    else:
-        print('...')
-        exit()
+    print('Voce tenta se defender')
+    print(defesa)
+    if defesa > 8:
+        print('Voce defende!')
+    elif defesa <= 8:
+        print('Voce não se defende')
+        print(atkd)
+        print(f'Voce sofrerá {atkd} de dano!')
+        hp -= atkd
+        print(f'Voce está com {hp} de vida.')
+        if hp <= 0:
+            print('...')
+            time.sleep(1)
+            print('Voce morreu, tente novamente.')
+            exit()
 elif esc == 3:
-    print(f'O valor sorteado em esquiva foi {esquiva}')
-    if esquiva >= 10:
-        print('Voce esquivou!')
-    elif esquiva < 10:
-        print('Voce não esquivou. (- 5 DMG)')
-    else:
-        print('...')
-        exit()
+    print('Voce tenta esquivar.')
+    print(esquiva)
+    if esquiva > 10:
+        print('Voce esquiva!')
+    elif esquiva <= 10:
+        print('Voce não esquiva.')
+        print(atkd)
+        print('Voce sofrerá {atkd} de dano.')
+        hp -= atkd
+        print(f'Voce está com {hp} de vida.')
+        if hp <= 0:
+            print('...')
+            time.sleep(1)
+            print('Voce morreu, tente novamente.')
+            exit()
+print('Ótimo, chegou a hora de atacar! ')
+print(f'''Oque deseja fazer? 
+[ 1 ] ataque básico de {arma}''')
+
+
+#Continue this.
