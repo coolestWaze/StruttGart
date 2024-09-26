@@ -1,38 +1,36 @@
 import random
 import time
+
 hp = 100
 print('[?] - Olá aventureiro! Como vai? Está pronto para entrar nas ruínas de StruttGart? Espero que sim!')
 print('[?] - Vamos começar do Básico, me conte seu nome?')
 player = input('Digite seu nome aqui: ')
 print(f"''{player}''... Ok! entendido. Agora vamos para algo mais interessante, ARMAS! Vamos lá!")
 print(f'''ok, {player}, escolha um número para adquirir alguma dessas armas: 
-[ 1 ] - Espada curta
-[ 2 ] - Espada média
-[ 3 ] - Espada longa
-[ 4 ] - Faixa para punho
-[ 5 ] - Núcleo mágico''')
-arma = int(input('Escolha aqui: '))
-if arma == 1:
+Espada curta
+Espada média
+Espada longa
+Faixa para punho
+Núcleo mágico''')
+arma = str(input('Escolha aqui: ')).lower()
+if arma == 'espada curta':
     print('[?] - Aham, voce parece ser bem agil, boa escolha!')
 
-elif arma == 2:
+elif arma == 'espada media':
     print('Básico, arma média é algo que da certo com todos, voce vai se acostumar!')
 
-elif arma == 3:
+elif arma == 'espada longa':
     print('[?] - Wow... Voce tem que ser bem forte para usar esta arma\nmas tenho certeza que vai se acostumar!')
 
-elif arma == 4:
+elif arma == 'faixa para punho':
     print('[?] - Entendi, então voce gosta de sair na mão com os outros? interessante...')
 
-elif arma == 5:
+elif arma == 'nucleo magico':
     print('[?] - Faz tempo que não vejo aventureiros escolherem isto...')
 
-elif arma == 0:
-    print('Ops, deu algum erro, voce digitou 0, escolha um numero de 1 a 5!')
-elif arma < 0:
-    print('Ops, deu algum erro, voce digitou um valor negativo, escolha um numero de 1 a 5!')
-elif arma > 5:
-    print('Ops, deu algum erro, voce digitou um valor maior que 5, escolha apenas um numero de 1 a 5!')
+else:
+    print('Ops, houve um erro, talvez tenha digitado errado?')
+    exit()
 
 print('[?] - Certo, agora eu me despeço de voce por enquanto, a criação de personagem ainda não terminou!')
 xk = int(input('Digite 1 para continuar '))
@@ -153,6 +151,7 @@ atk = random.randint(1, 20)
 atkd = random.randint(5, 25)
 defesa = random.randint(1, 20)
 esquiva = random.randint(1, 20)
+atkmiss = random.randint(1, 20)
 print('''Voce deseja:   [ 1 ] - contra-atacar
                     [ 2 ] - defender
                     [ 3 ] - esquivar''')
@@ -211,6 +210,24 @@ elif esc == 3:
 print('Ótimo, chegou a hora de atacar! ')
 print(f'''Oque deseja fazer? 
 [ 1 ] ataque básico de {arma}''')
+kl = int(input('Digite sua ação: '))
+if kl != 1:
+    print('...')
+    exit()
+else:
+    print('Voce tenta atacar!')
+    print(atkmiss)
+    if atkmiss > 10:
+        print('Voce acerta!')
+        print(atkd)
+        print(f'Voce da {atkd} de dano!')
+        if atkd > 15:
+            print('A criatura parece muito ferida!')
+        elif atkd >= 10:
+            print('A criatura parece ferida!')
+        else:
+            print('A criatura não parece ter tido uma reação sob seu ataque.')
+    elif atkmiss <= 10:
+        print('Voce erra.')
 
-
-#Continue this.
+#CONTINUE THIS.
