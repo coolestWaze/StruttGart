@@ -149,6 +149,7 @@ else:
     exit()
 atk = random.randint(1, 20)
 atkd = random.randint(5, 25)
+atkdc = random.randint(5, 15)
 defesa = random.randint(1, 20)
 esquiva = random.randint(1, 20)
 atkmiss = random.randint(1, 20)
@@ -211,6 +212,7 @@ print('Ótimo, chegou a hora de atacar! ')
 print(f'''Oque deseja fazer? 
 [ 1 ] ataque básico de {arma}''')
 kl = int(input('Digite sua ação: '))
+hpc = 30
 if kl != 1:
     print('...')
     exit()
@@ -229,5 +231,50 @@ else:
             print('A criatura não parece ter tido uma reação sob seu ataque.')
     elif atkmiss <= 10:
         print('Voce erra.')
-
-#CONTINUE THIS.
+        print('Voce será atacado. ')
+        print(atkdc)
+        print(f'Voce tomou {atkdc} de dano.')
+        hp -= atkdc
+        if hp <= 0:
+            print('Voce morreu... Tente novamente.')
+            exit()
+print('Voce será atacado. ')
+print(atkdc)
+print(f'Voce tomou {atkdc} de dano.')
+hp -= atkd
+if hp <= 0:
+    print('Voce morreu... Tente novamente.')
+    exit()
+else:
+    print('Voce pode atacar agora! ')
+print(f'''Oque deseja fazer? 
+[ 1 ] ataque básico de {arma}''')
+kl1 = int(input('Digite sua ação: '))
+if kl1 != 1:
+    print('...')
+    exit()
+else:
+    print('Voce tenta atacar a criatura.')
+    print(atkmiss)
+    if atkmiss > 10:
+        print('Voce acerta.')
+        print(atkd)
+        print(f'Voce deu {atkd} de dano na criatura.')
+        hpc -= atkd
+        if ahp == 0:
+            print('Voce derrotou a criatura! ')
+            print('+Núcleo de Vingarr')
+        else:
+            print('A criatura parece assustada, após seus breves ataques, ela foge.')
+            print('+Núcleo de Vingarr')
+    if atkmiss <= 10:
+        print('Voce erra, porém com a tentativa de ataque, a criatura foge assustada.')
+        print('+Núcleo de Vingarr')
+print('[ Fuingett ] - Hah, como esperado, voce derrotou a criatura com facilidade...')
+print('Pelo jeito, também ganhou algo né? "Núcleo de Vingarr" é como se chama isto, é realmente útil, voce pode troca-lo', end=' ')
+print('por XP no centro de StruttGart.')
+time.sleep(1)
+print('...')
+time.sleep(0.5)
+print('Aqui se encerra StruttGart por enquanto... espero que esteja bom.')
+exit()
