@@ -29,9 +29,11 @@ if n == 1:
         print('-='*8)
         if ritem == ritem2:
             print(f'2x {ritem}')
+            print('-=' * 8)
         else:
             print(f'1x{ritem2}')
             print(f'1x{ritem}')
+            print('-=' * 8)
     elif act == 2 or act == 3:
         print('Voce não tem nada na bolsa.')
         exit()
