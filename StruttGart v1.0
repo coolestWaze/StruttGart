@@ -12,11 +12,11 @@ Espada média
 Espada longa
 Faixa para punho
 Núcleo mágico''')
-arma = str(input('Escolha aqui: ')).lower()
+arma = str(input('Escolha aqui: ')).strip().lower()
 if arma == 'espada curta':
     print('[?] - Aham, voce parece ser bem agil, boa escolha!')
 
-elif arma == 'espada media':
+elif arma == 'espada media' or arma == 'espada média':
     print('Básico, arma média é algo que da certo com todos, voce vai se acostumar!')
 
 elif arma == 'espada longa':
@@ -25,7 +25,7 @@ elif arma == 'espada longa':
 elif arma == 'faixa para punho':
     print('[?] - Entendi, então voce gosta de sair na mão com os outros? interessante...')
 
-elif arma == 'nucleo magico':
+elif arma == 'nucleo magico' or arma == 'núcleo mágico' or arma == 'núcleo magico' or arma == 'nucleo mágico':
     print('[?] - Faz tempo que não vejo aventureiros escolherem isto...')
 
 else:
@@ -38,7 +38,8 @@ if xk == 1:
     print('[?] - Agora irei chamar o grande mestre Fuingett, ele irá dar continuação a sua aventura! A propósito, ')
     print('Eu nem me apresentei, prazer, sou Meya, a assistente de aventureiros aqui em StruttGart!')
     xk1 = int(input('Digite 1 para continuar '))
-    print('[Meya] - Agora vamos chamar Fuingett, temos que contar até 3 e bater uma palma, vamos comigo!')
+    print('[Meya] - Agora vamos chamar Fuingett, temos que contar até 3 e bater uma palma,', end=' ')
+    print('faça isso comigo.')
 else:
     print('...')
     (exit())
@@ -102,21 +103,23 @@ elif raca == 3:
 elif raca == 4:
     print('Voce escolheu Gigante!')
 elif raca == 5:
-    print('Strovin..? Não me lembro de ter adicionado esta raça aqui... Não escolha isto, porfavor.') # -- Este é sobre a lore de StruttGart
-    exit()
-elif raca > 5:
-    print('...')
-    exit()
-elif raca < 0:
+    print('Não me lembro de ter deixado isto aqui, porfavor, escolha outra raça.')
+    while raca == 5:
+        raca = int(input('Escolha sua raça: '))
+        if raca == 5:
+            print('...')
+if raca > 5 or raca < 0:
     print('...')
     exit()
 print('[Fuingett] - Ótimo, podemos continuar!')
 xk5 = int(input('Digite 1 para continuar '))
+while xk5 != 1:
+    print('...')
+    xk5 = int(input('Digite 1 para continuar '))
+    if xk5 != 1:
+        print('...')
 if xk5 == 1:
     print('Vamos lá, vamos voltar para a superficie de StruttGart!')
-else:
-    print('...')
-    exit()
 time.sleep(0.2)
 print('*de volta a superficie, voce sente algo correndo por suas veias...')
 if raca == 1:
@@ -133,6 +136,11 @@ print('apenas derrote-o, é um experimento. ')
 print('''Opções: [ 1 ] - "Fuingett, eu não posso, eu não entendo oque estou fazendo..."
 [ 2 ] - ... *Vai para cima da criatura*''')
 opc = int(input('Escolha oque fará: '))
+while opc != 2 and opc != 1:
+    print('...')
+    opc = int(input('Escolha oque fará: '))
+    if opc != 2 and opc != 1:
+        print('...')
 if opc == 2:
     print("[Fuingett] - Aham.. voce é rápido. Boa sorte!")
 elif opc == 1:
@@ -144,9 +152,6 @@ elif opc == 1:
         print('[Fuingett] - Não há oque entender, apenas vá.')
     elif opc == 1:
         print('Voce enfrenta seu medo e vai...')
-else:
-    print('...')
-    exit()
 atk = random.randint(1, 20)
 atkd = random.randint(5, 25)
 atkdc = random.randint(5, 15)
@@ -213,9 +218,11 @@ print(f'''Oque deseja fazer?
 [ 1 ] ataque básico de {arma}''')
 kl = int(input('Digite sua ação: '))
 hpc = 30
-if kl != 1:
+while kl != 1:
     print('...')
-    exit()
+    kl = int(input('Digite sua ação: '))
+    if kl != 1:
+        print('...')
 else:
     print('Voce tenta atacar!')
     print(atkmiss)
@@ -250,9 +257,11 @@ else:
 print(f'''Oque deseja fazer? 
 [ 1 ] ataque básico de {arma}''')
 kl1 = int(input('Digite sua ação: '))
-if kl1 != 1:
+while kl1 != 1:
     print('...')
-    exit()
+    kl1 = int(input('Digite sua ação: '))
+    if kl1 != 1:
+        print('...')
 else:
     print('Voce tenta atacar a criatura.')
     print(atkmiss)
@@ -261,7 +270,7 @@ else:
         print(atkd)
         print(f'Voce deu {atkd} de dano na criatura.')
         hpc -= atkd
-        if ahp == 0:
+        if hpc == 0:
             print('Voce derrotou a criatura! ')
             print('+Núcleo de Vingarr')
         else:
@@ -273,8 +282,6 @@ else:
 print('[ Fuingett ] - Hah, como esperado, voce derrotou a criatura com facilidade...')
 print('Pelo jeito, também ganhou algo né? "Núcleo de Vingarr" é como se chama isto, é realmente útil, voce pode troca-lo', end=' ')
 print('por XP no centro de StruttGart.')
-time.sleep(1)
-print('...')
-time.sleep(0.5)
-print('Aqui se encerra StruttGart por enquanto... espero que esteja bom.')
-exit()
+print('Podemos continuar, vamos conhecer os moradores de StruttGart.')
+
+#NOT FINISHED YET
