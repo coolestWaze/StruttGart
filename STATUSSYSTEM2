@@ -65,7 +65,7 @@ else:
         print(f'seu hp agora é: {updhp(dex)}')
         exit()
     else:
-        print(f'Voce tem agora {dex} pontos para gastar.')
+        print(f'Voce tem agora {pontos} pontos para gastar.')
         print(f'seu hp agora é: {updhp(dex)}')
 print('E por ultimo, intelecto: ')
 intel = int(input('Digite seu intelecto aqui: '))
@@ -81,8 +81,6 @@ else:
     if pontos == 0:
         print('Voce usou todos seus pontos nesta personalização de status!')
         exit()
-    elif pontos > 1:
+    elif pontos >= 1:
         print(f'ainda te restam {pontos} pontos, não se preocupe, futuramente voce poderá gasta-los.')
         exit()
-
-# I CAN'T FIX THESE ERRORS, I'M PROBABLY TIRED, I'LL TRY IT AGAIN TOMORROW. (27/09/2024)
