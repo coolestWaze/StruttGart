@@ -1,28 +1,35 @@
 import random
-hpm = 30
-miss = [1, 1, 2]
-p = random.choice(miss)
-def fungi():
-    if p == 1:
-        global hpm
-        z = random.randint(5, 30)
-        print('Voce acertou.')
-        print(f'Dano: {z}')
-        hpm -= z
-    else:
-        print('Voce errou.')
-def hyoto_1():
-    x = random.choice(miss)
-    if p == 1:
-        global hpm
-        z1 = random.randint(8, 28)
-        print('Voce acertou.')
-        print(f'Dano: {z1}')
-        hpm -= z1
-x = int(input('digite 1 para fungi e 2 para hyoto: '))
-if x == 1:
-    fungi()
-    exit()
-elif x == 2:
-    hyoto_1()
-    exit()
+miss = [1, 2, 2]
+hpm = 45
+def __fungi__():
+    global hpm
+    dmgf = random.randint(1, 30)
+    r = random.choice(miss)
+    if r == 1:
+        print('Voce erra')
+    elif r == 2:
+        print('Voce acerta!')
+        print(f'Voce da {dmgf} de dano!')
+        hpm -= dmgf
+        print(f'HP da criatura: {hpm}')
+def __hyoto__():
+    global hpm
+    dmgh = random.randint(5, 25)
+    r = random.choice(miss)
+    if r == 1:
+        print('Voce erra.')
+    elif r == 2:
+        print('Voce acerta!')
+        print(f'Voce da {dmgh} de dano!')
+        hpm -= dmgh
+        print(f'HP da criatura: {hpm}')
+
+while hpm > 0:
+    act = int(input('Digite 1 para "Fungi" e 2 para "Hyoto": '))
+    if act == 1:
+        __fungi__()
+    elif act == 2:
+        __hyoto__()
+    if hpm <= 0:
+        print('Voce derrotou a criatura!')
+        exit()
