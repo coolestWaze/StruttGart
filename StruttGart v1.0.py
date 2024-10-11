@@ -38,8 +38,7 @@ if xk == 1:
     print('[?] - Agora irei chamar o grande mestre Fuingett, ele irá dar continuação a sua aventura! A propósito, ')
     print('Eu nem me apresentei, prazer, sou Meya, a assistente de aventureiros aqui em StruttGart!')
     xk1 = int(input('Digite 1 para continuar '))
-    print('[Meya] - Agora vamos chamar Fuingett, temos que contar até 3 e bater uma palma,', end=' ')
-    print('faça isso comigo.')
+    print('[Meya] - Agora chame "101101101001"... conte até 3.', end=' ')
 else:
     print('...')
     (exit())
@@ -326,6 +325,5 @@ if n == 1:
             print('1x Núcleo de Vingarr')
             print('-=' * 8)
     elif act == 2 or act == 3:
-        print('Voce não tem nada na bolsa.')
-        exit()
-exit()
+        print('1X Núcleo de Vingarr')
+        print('-='*8)
