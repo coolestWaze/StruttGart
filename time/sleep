@@ -1,0 +1,20 @@
+time = 2
+if time == 2:
+    t = 'noite'
+elif time == 1:
+    t = 'tarde'
+elif time == 0:
+    t = 'manha'
+def timeset():
+    if time == 2:
+        print('Está de noite.')
+sl = int(input('Voce está perto de uma cama, digite 1 para dormir: '))
+if sl == 1:
+    print('Voce dorme.')
+    time = 0
+    print('Está de manhã.')
+else:
+    print('Voce continua acordado.')
+    print('Está de noite.')
+    exit()
+exit()
