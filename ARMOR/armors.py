@@ -1,6 +1,3 @@
-#Wood armor kit +5% HP
-#Iron armor kit +10% HP
-#Cooper armor kit +15% HP
 hp = 100
 pW = (hp * 5)/100
 pI = (hp * 10)/100
