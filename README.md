@@ -4,5 +4,5 @@ This will probably be open in the future :)
 
 OBS> IT'S NOW PUBLIC!
 
-- ALPHA 0.1
+- INSANE ALPHA 0.1
 - Waze
