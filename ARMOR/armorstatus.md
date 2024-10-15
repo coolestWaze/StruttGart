@@ -4,4 +4,4 @@
   // 
 #Cooper armor kit +15% HP
   //
-#Goldedn armor kit +18% HP
+#Golden armor kit +18% HP
