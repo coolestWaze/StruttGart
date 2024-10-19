@@ -1,6 +1,6 @@
 import random
 import time
-fish = ['Peixe comum', 'Salmão']
+fish = ['Peixe comum', 'Peixe comum', 'Salmão']
 print('Voce está nas margens de um rio.')
 fishing = int(input('deseja pescar? [1 para confirmar] - '))
 if fishing != 1:
