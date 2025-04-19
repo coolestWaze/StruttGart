@@ -1,7 +1,3 @@
-#Wood armor kit +5% HP
-#Iron armor kit +10% HP
-#Cooper armor kit +15% HP
-#Golden armmor kit +18% HP
 hp = 100
 def armor_set():
     pw = (hp * 5)/100
